@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: nginx
-  name: app1
+  name: app2
   namespace: default
 spec:
   replicas: 1
