@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: app3
+  namespace: flux-system
+spec:
+  releaseName: app3
+  targetNamespace: default
+  storageNamespace: default
+  chart:
+    spec:
+      chart: ./clusters/my-cluster/charts/app3
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+        namespace: flux-system
+  dependsOn: []
+  install:
+    createNamespace: true
+    disableWait: true
+    remediation:
+      retries: -1
+  interval: 1m
+  values:
+    replicaCount: 1
+    image:
+      repository: nginx:alpine
+      pullPolicy: IfNotPresent
