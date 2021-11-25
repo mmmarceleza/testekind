@@ -7,3 +7,4 @@ resources:
 - ../apps/app1/deployment.yaml
 - ../apps/app2/app2-kustomization.yaml
 - ../apps/app3/app3-kustomization.yaml
+- ../apps/app4/app4-kustomization.yaml
