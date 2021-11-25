@@ -4,4 +4,5 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 
-- ../apps/app1
+- ../apps/app1/deployment.yaml
+- ../apps/app2/app2-kustomization.yaml
